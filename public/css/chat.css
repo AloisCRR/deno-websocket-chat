@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    flex: 1 0 20%;
+
+    background-color:#62929a;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.users-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 3rem;
+
+    background-color: rgba(255,255,255,0.3);
+    letter-spacing: 3px;
+}
+
+.chat-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 4rem;
+}
+
+.chat {
+    flex: 4 0 80%;
+
+    background-color:#efecec;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Contenido del chat room */
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 3rem;
+    position: sticky;
+    top: 0;
+
+    padding: 10px;
+    background-color:#efecec;
+    box-shadow: 0px 9px 11px -10px rgba(0,0,0,0.3);
+}
+
+#leave {
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.chat-content {
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px;
+}
+
+.chat-content> * {
+    margin-bottom: 16px;
+}
+
+.message {
+    border-radius: 25px 25px 0 25px;
+    color: white;
+    padding: 15px;
+    word-wrap: break-word;
+    
+    width: fit-content;
+    max-width: 80%;
+}
+
+.received {
+    border-radius: 25px 25px 25px 0;
+    background-color: #5c5757;
+}
+
+.sent {
+    border-radius: 25px 25px 0 25px;
+    align-self: flex-end;
+    background-color: #62929a;
+}
+
+.chat-footer {
+    display: flex;
+    align-items: center;
+
+    background-color:#efecec;
+    box-shadow: 0px 9px 11px 10px rgba(0,0,0,0.3);
+
+    position: sticky;
+    top: 100vh;
+
+    height: 5%;
+    padding: 5px 15px;
+}
+
+.chat-footer form {
+    display: flex;
+    width: 100%;
+}
+
+input {
+    flex-grow: 6;
+    padding: 7px;
+    margin-right: 5px;
+    outline: 0;
+}
+
+button[type="submit"] {
+    flex-grow: 1;
+}
