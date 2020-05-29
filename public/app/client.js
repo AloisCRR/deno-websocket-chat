@@ -55,7 +55,12 @@ function OnMessageReceived(event) {
 			break;
 
 		case "message":
+			const scrollHeight = chatMessages.scrollHeight;
+			const scrollPos = chatMessages.offsetHeight + chatMessages.scrollTop;
 			newMessage(event.data);
+			if (scrollHeight === scrollPos) {
+				chatMessages.scrollTo(0, chatMessages.scrollHeight);
+			}
 			break;
 
 		case "messageHistory":
